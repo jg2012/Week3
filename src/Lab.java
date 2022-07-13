@@ -65,6 +65,94 @@ public class Lab {
 			
 		}System.out.println(sumOfLetters);
 		
+		
+		//write and test a method that takes a String name and prints out a greeting, this method returns nothing
+		greet("Tom"); 
+		greet("Sally"); 
+		
+		
+		//write and test a method that takes a String name and returns a greeting, do not print in the method 
+		
+		String greeting = greet2("Nick");
+		System.out.println(greeting);
+		
+		//analyze the difference between these two methods - what do you find? How are they different? 
+		// a mismatch of types. 
+		
+		
+		//write and test a method that takes a String and an int and returns true if the number of letters in the string are greater than the int
+		System.out.println(isStringLongerThanNumber("Hello",3)); 
+		
+		
+		//write and test a method that takes an array of string and a string that returns true if the string passed in exists in the array 
+		
+		System.out.println(doesArrayContainString(names, "Same"));
+		
+		//write and test a method that takes an array of int and returns the smallest number in the array 
+		
+		
+		
+		//write an test a method that takes an array of double and returns the average 
+		
+		
+		
+		//write and test a method that takes an array of String sand returns an array of int where each element
+		//matches the length of the string at the position 
+		
+		
+		
+		//write and test a method that takes an array of string and returns true if the sume of letters for all strings iwth an 
+		//even aount of letters is greater than the sum of those with an odd amount of letters. 
+		
+		
+		
+		//write and test a method that takes a string and returns true if the string is a palindrome. 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		
+		
 	}
-
+	
+	
+	public static void greet(String name){
+		System.out.println("Hello, "+ name + "!");
+	}
+	
+	public static String greet2(String name ) {
+		return "Hi, "+ name + "!"; 
+	}
+	
+	public static boolean isStringLongerThanNumber(String string, int number) {
+		return(string.length()> number) ;	
+	}
+	
+	public static boolean doesArrayContainString(String[] array, String string) {
+		for(String str: array) {
+			if(str.equals(string)) {
+				return true; 
+			}
+		}
+		return false; 
+	}
+	
+	
+	
+	
+	
 }
