@@ -34,10 +34,8 @@ public class TeamMenuApp {
 			 }else if (decision == 4) {
 				 deleteTeamMember(team);
 			 }else  {
-			 deleteAllTeamMembers(team); 
-			 }
-			 
-			 
+				 deleteAllTeamMembers(team); 
+			 }	 
 			 
 		 }
 		
