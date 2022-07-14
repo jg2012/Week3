@@ -90,42 +90,59 @@ public class Lab {
 		
 		//write and test a method that takes an array of int and returns the smallest number in the array 
 		
-		
+		System.out.println(findSmallestNumber(values));
 		
 		//write an test a method that takes an array of double and returns the average 
-		
-		
+		double[]doubles = {45.7,30.2, 67.}; 
+		System.out.println(calculateAverage(doubles));
 		
 		//write and test a method that takes an array of String sand returns an array of int where each element
 		//matches the length of the string at the position 
-		
-		
+		int[] nameLengths= extractStringLength(names);
+		for(int number: nameLengths) {
+			System.out.println(number);
+		}
 		
 		//write and test a method that takes an array of string and returns true if the sume of letters for all strings iwth an 
 		//even aount of letters is greater than the sum of those with an odd amount of letters. 
-		
+		System.out.println(hasMoreEvenWordCharcters(names));
 		
 		
 		//write and test a method that takes a string and returns true if the string is a palindrome. 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		System.out.println(isPalindrome("mom"));
 		
 		
 	
+	}
+	
+	public static boolean isPalindrome(String string) {
+		for( int i = 0; i < string.length()/2; i++) {
+			if(string.charAt(i) != string.charAt(string.length()-i-1)) {
+				return false; 
+			}
+		}return true; 
 		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	public static boolean hasMoreEvenWordCharcters(String[] array) {
+		int evenLetters = 0; 
+		int oddLetters = 0; 
+		
+		for (String string : array) {
+			if( string.length() % 2 == 0) {
+				evenLetters += string.length(); 
+			}else {
+				oddLetters += string.length(); 
+			}
+		}
+		return evenLetters > oddLetters; 
 		
 	}
 	
@@ -151,8 +168,31 @@ public class Lab {
 		return false; 
 	}
 	
+	public static int findSmallestNumber (int[] numbers) {
+		int smallest = numbers[0]; 
+		for(int number: numbers) {
+			if (number < smallest) {
+				smallest = number; 
+			}
+		}
+		return smallest; 
+	}
 	
+	public static double calculateAverage(double [] array) {
+		double sum = 0; 
+		for(double number: array) {
+			sum += number; 
+		}
+		return sum / array.length; 
+	}
 	
+	public static int[] extractStringLength(String[] strings) {
+		int[]results = new int[strings.length]; 
+		for(int i =0; i < strings.length; i++) {
+			results[i] = strings[i].length(); 
+		}
+		return results; 
+	} 
 	
 	
 }
